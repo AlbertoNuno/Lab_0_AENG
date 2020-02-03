@@ -45,14 +45,11 @@ direccion = lambda open,close : 'Alcista' if close>=open else 'Bajista'
 
 df_pe['sentido']=pd.DataFrame( direccion(df_pe['Open'][i],df_pe['Close'][i]) for i in range(len(df_pe['Open'])))
 
-
-
-
-
-
-#for i in range(len(sesiones)):
- #   for j in range(len(sesiones[i])): ## iteracion sobre el arreglo elegido
-  #      if(df_pe['Hora'][]
+#sentido_num =lambda sentido : 1
+#df_pe['sentido_c']=pd.DataFrame(df_pe['sentido'].cumsum())
+df_pe['volatilidad_5']=(df_pe['hl'].rolling(5)).max()
+df_pe['volatilidad 25']=(df_pe['hl'].rolling(25)).max()
+df_pe['volatilidad 50']=(df_pe['hl'].rolling(50)).max()
 
 
 
